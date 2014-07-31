@@ -57,7 +57,7 @@
 }
 
 -(void)reload:(GoodsEntity *)goods{
-    [_imageView setImageFromURL:[NSURL URLWithString:goods.image.img] placeHolderImage:[UIImage imageNamed:@"default-320x150"] animation:YES];
+    [_imageView setImageFromURL:[NSURL URLWithString:goods.image.img]];
     _priceLabel.text = [NSString stringWithFormat:@"<font size=10 color='#EB3F3F'>￥</font><font size=17 color='#EB3F3F'>%@</font>",goods.price];
     if(goods.priceOriginal !=nil && [goods.priceOriginal floatValue] !=0){
         _oldPriceLabel.text = [NSString stringWithFormat:@"<font size=12 >￥%@</font>",goods.priceOriginal];
