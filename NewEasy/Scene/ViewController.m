@@ -43,12 +43,14 @@
     [RACObserve(self.demoSceneModel.goodsListRequest, state) //监控 网络请求的状态
      subscribeNext:^(NSNumber *state) {
          @strongify(self); //@strongify 在ReactiveCocoa中 防止提前释放
+
          if(self.demoSceneModel.goodsListRequest.failed){
-             [SVProgressHUD showErrorWithStatus:@"数据加载失败!"];
+             
+           //  [MBProgressHUD showErrorWithStatus:@"数据加载失败!"];
          }else if(self.demoSceneModel.goodsListRequest.sending){
-             [SVProgressHUD showWithStatus:@"数据加载中!"];
+            // [SVProgressHUD showWithStatus:@"数据加载中!"];
          }else if(self.demoSceneModel.goodsListRequest.succeed){
-             [SVProgressHUD dismiss];
+            // [SVProgressHUD dismiss];
          }
      }];
     
@@ -63,14 +65,13 @@
 }
 
 #pragma mark - Table view delegate
-
--(void)handlePullLoader:(MJRefreshBaseView *)view state:(NSInteger)state{
-    [super handlePullLoader:view state:state];
-    if(state == HEADER_REFRESH){
-        _collectionView.page = @1;
-    }else if (state == REACH_BOTTOM){
-        _collectionView.page = @([_collectionView.page integerValue] + 1);
-    }
+-(void)handlePullLoader:(MJRefreshBaseView *)view state:(PullLoaderState)state{
+        [super handlePullLoader:view state:state];
+        if(state == HEADER_REFRESH){
+            _collectionView.page = @1;
+        }else if (state == REACH_BOTTOM){
+            _collectionView.page = @([_collectionView.page integerValue] + 1);
+        }
 }
 
 #pragma mark -- UICollectionViewDataSource

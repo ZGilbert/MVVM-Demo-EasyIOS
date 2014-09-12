@@ -36,8 +36,8 @@
      }]
      subscribeNext:^(NSNumber *state) {
         @strongify(self);
-        [self.action saveCache]; //保存缓存到文件
-        self.goodsArray = [GoodsArray objectFromDictionary:[self.goodsListRequest.output objectForKey:@"data"]]; //Model的ORM操作，dictionary to object
+         NSLog(@"%@",self.goodsListRequest.url);
+        self.goodsArray = [[GoodsArray alloc] initWithDictionary:[self.goodsListRequest.output objectForKey:@"data"] error:nil]; //Model的ORM操作，dictionary to object
     }];
 }
 

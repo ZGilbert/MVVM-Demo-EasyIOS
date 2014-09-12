@@ -41,24 +41,16 @@ install_resource()
       ;;
   esac
 }
-install_resource "EasyIOS/Extend/FontIcon/FontAwesome/fontAwesome.json"
-install_resource "EasyIOS/Extend/FontIcon/FontAwesome/fontAwesome.otf"
-install_resource "EasyIOS/Extend/FontIcon/fontIconConfig.json"
-install_resource "EasyIOS/Extend/FontIcon/FoundationIcons/foundationIcons.json"
-install_resource "EasyIOS/Extend/FontIcon/FoundationIcons/foundationIcons.ttf"
-install_resource "EasyIOS/Extend/FontIcon/IonIcons/ionIcons.json"
-install_resource "EasyIOS/Extend/FontIcon/IonIcons/ionIcons.ttf"
-install_resource "EasyIOS/Extend/FontIcon/Zocial/zocialRegularWebfont.json"
-install_resource "EasyIOS/Extend/FontIcon/Zocial/zocialRegularWebfont.ttf"
 install_resource "EasyIOS/Extend/MJRefresh/arrow-down@2x.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/error-black.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/error-black@2x.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/error.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/error@2x.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/success-black.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/success-black@2x.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/success.png"
-install_resource "EasyIOS/Extend/SVProgressHUD/SVProgressHUD.bundle/success@2x.png"
+install_resource "FontIcon/FontAwesome/fontAwesome.json"
+install_resource "FontIcon/FontAwesome/fontAwesome.otf"
+install_resource "FontIcon/fontIconConfig.json"
+install_resource "FontIcon/FoundationIcons/foundationIcons.json"
+install_resource "FontIcon/FoundationIcons/foundationIcons.ttf"
+install_resource "FontIcon/IonIcons/ionIcons.json"
+install_resource "FontIcon/IonIcons/ionIcons.ttf"
+install_resource "FontIcon/Zocial/zocialRegularWebfont.json"
+install_resource "FontIcon/Zocial/zocialRegularWebfont.ttf"
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

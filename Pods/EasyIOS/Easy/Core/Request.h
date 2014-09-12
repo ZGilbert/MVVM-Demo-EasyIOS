@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MKNetworkEngine.h"
+
 typedef enum
 {
     SuccessState                    =0,
@@ -21,11 +21,14 @@ typedef enum
 @property(nonatomic,strong)NSString *responseString;
 @property(nonatomic,strong)NSError *error;
 @property(nonatomic,assign)NSInteger state;
+@property(nonatomic,retain)NSString *url;
 @property(nonatomic,strong)NSString *discription;
 @property(nonatomic,assign)double progress;
+@property(nonatomic,assign)long long totalBytesWritten;
+@property(nonatomic,assign)long long totalBytesExpectedToWrite;
 @property(nonatomic,assign)BOOL freezable;
-@property(nonatomic,strong)MKNetworkOperation *op;
-
+@property(nonatomic,strong)NSDictionary *requestFiles;
+@property(nonatomic,retain)NSString *SCHEME;
 @property(nonatomic,retain)NSString *HOST;
 @property(nonatomic,retain)NSString *PATH;
 @property(nonatomic,retain)NSString *METHOD;
@@ -34,8 +37,8 @@ typedef enum
 -(NSString *)requestKey;
 +(NSString *)requestKey;
 -(NSDictionary *)requestParams;
--(NSDictionary *)requestFiles;
-
+-(NSString *)pathInfo;
+-(NSString *)appendPathInfo;
 - (BOOL)succeed;
 - (BOOL)sending;
 - (BOOL)failed;

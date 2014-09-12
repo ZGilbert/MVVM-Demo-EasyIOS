@@ -1,1 +1,1 @@
-../../EasyIOS/swift-bridge.h
+../../EasyIOS/Easy/swift-bridge.h

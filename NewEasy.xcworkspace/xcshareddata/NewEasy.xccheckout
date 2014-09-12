@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>51BEF265-3201-4B21-8013-0C488CFBCD78</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NewEasy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C54F8006E62DE1458494FB487A91D1FE9182FC42</key>
+		<string>https://github.com/zhuchaowe/MVVM-Demo--EasyIOS-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NewEasy.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C54F8006E62DE1458494FB487A91D1FE9182FC42</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zhuchaowe/MVVM-Demo--EasyIOS-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C54F8006E62DE1458494FB487A91D1FE9182FC42</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C54F8006E62DE1458494FB487A91D1FE9182FC42</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MVVM-Demo--EasyIOS-</string>
+		</dict>
+	</array>
+</dict>
+</plist>

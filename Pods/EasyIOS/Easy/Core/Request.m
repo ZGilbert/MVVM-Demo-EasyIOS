@@ -8,6 +8,7 @@
 
 #import "Request.h"
 #import <objc/runtime.h>
+#import "RegExCategories.h"
 @implementation Request
 
 +(id)Request{
@@ -27,6 +28,7 @@
     self.discription = @"";
     self.progress = 0.0f;
     self.freezable = NO;
+    self.SCHEME = @"";
     self.HOST = @"";
     self.PATH = @"";
     self.METHOD = @"GET";
@@ -65,8 +67,20 @@
     return dict;
 }
 
--(NSDictionary *)requestFiles{
-    return [NSDictionary dictionary];
+-(NSString *)appendPathInfo{
+    __block NSString *pathInfo = self.pathInfo;
+    if(![pathInfo isEmpty]){
+        [self.requestParams enumerateKeysAndObjectsUsingBlock:^(NSString* key, id value, BOOL *stop) {
+            NSString *par = [NSString stringWithFormat:@"(\\{%@\\})",key];
+            NSString *str = [NSString stringWithFormat:@"%@",value];
+            pathInfo = [pathInfo replace:RX(par) with:str];
+        }];
+    }
+    return pathInfo;
+}
+
+-(NSString *)pathInfo{
+    return nil;
 }
 
 -(NSArray *)getPropertyList:(Class)klass{

@@ -34,5 +34,5 @@
 
 typedef NSMutableString *	(^NSMutableStringAppendBlock)( id format, ... );
 @property(nonatomic,readonly) NSMutableStringAppendBlock APPEND;
-
++(NSMutableString *)stringFromResFile:(NSString *)name encoding:(NSStringEncoding)encode;
 @end

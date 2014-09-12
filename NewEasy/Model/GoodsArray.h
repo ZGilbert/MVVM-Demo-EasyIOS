@@ -7,9 +7,14 @@
 //
 
 #import "Model.h"
+#import "GoodsEntity.h"
+
+@protocol GoodsEntity <NSObject>
+
+@end
 
 @interface GoodsArray : Model
-@property(nonatomic,retain)NSArray *goodsList;
+@property(nonatomic,retain)NSArray<GoodsEntity> *goodsList;
 @property(nonatomic,retain)NSNumber *total;
 
 @end

@@ -17,7 +17,7 @@
 @property(strong,nonatomic)NSMutableArray *dataArray;
 @property(nonatomic,strong)NSString *cacheDataString;
 @property(nonatomic,strong)UILabel *msgLabel;
-@property(strong, nonatomic)id <SceneCollectionViewDelegate> SceneDelegate;
+@property(weak, nonatomic)id <SceneCollectionViewDelegate> SceneDelegate;
 -(void)addHeader;
 -(void)addFooter;
 -(void)initPage;
@@ -29,6 +29,6 @@
 @protocol SceneCollectionViewDelegate <NSObject>
 
 @required
--(void)handlePullLoader:(MJRefreshBaseView *)view state:(NSInteger)state;
+-(void)handlePullLoader:(MJRefreshBaseView *)view state:(PullLoaderState)state;
 
 @end

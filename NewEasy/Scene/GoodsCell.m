@@ -47,7 +47,6 @@
         _oldPriceLabel.text = @"<font size=12>￥0</font>";
         _oldPriceLabel.textColor = [UIColor colorWithString:@"#707070"];
         [_oldPriceLabel setTextAlignment:RTTextAlignmentCenter];
-        _oldPriceLabel.isWithStrikeThrough = YES;
         _oldPriceLabel.hidden = YES;
         [self addSubview:_oldPriceLabel];
         
@@ -57,7 +56,7 @@
 }
 
 -(void)reload:(GoodsEntity *)goods{
-    [_imageView setImageFromURL:[NSURL URLWithString:goods.image.img]];
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:goods.image.img]];
     _priceLabel.text = [NSString stringWithFormat:@"<font size=10 color='#EB3F3F'>￥</font><font size=17 color='#EB3F3F'>%@</font>",goods.price];
     if(goods.priceOriginal !=nil && [goods.priceOriginal floatValue] !=0){
         _oldPriceLabel.text = [NSString stringWithFormat:@"<font size=12 >￥%@</font>",goods.priceOriginal];

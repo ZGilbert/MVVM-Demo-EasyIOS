@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CacheAction.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +15,6 @@
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UIImageView setDefaultEngine:[CacheAction sharedInstance]];
-    
     // Override point for customization after application launch.
     return YES;
 }

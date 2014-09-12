@@ -15,7 +15,8 @@
  */
 -(void)loadRequest{
     [super loadRequest];
-    //self.HOST = @"test-leway.zjseek.com.cn:8000"; 不设置host 就采用宏定义的全局host
+    self.SCHEME = @"http";
+    self.HOST = @"test-leway.zjseek.com.cn:8000"; //不设置host 就采用宏定义的全局host
     self.PATH = @"/api/goods/goodsList";
     self.type = @"1";
     self.categoryId = @"-1";

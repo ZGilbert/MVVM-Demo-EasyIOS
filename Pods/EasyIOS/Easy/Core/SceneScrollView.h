@@ -12,7 +12,7 @@
 @property(nonatomic,strong)MJRefreshHeaderView *header;
 @property(strong,nonatomic)NSString *cacheDataString;
 @property(nonatomic,strong)UILabel *msgLabel;
-@property (strong, nonatomic) id <SceneScrollViewDelegate> SceneDelegate;
+@property (weak, nonatomic) id <SceneScrollViewDelegate> SceneDelegate;
 -(void)addHeader;
 -(void)flashMessage:(NSString *)msg;
 -(void)endAllRefreshing;
@@ -21,5 +21,5 @@
 @protocol SceneScrollViewDelegate <NSObject>
 
 @required
--(void)handlePullLoader:(MJRefreshBaseView *)view state:(NSInteger)state;
+-(void)handlePullLoader:(MJRefreshBaseView *)view state:(PullLoaderState)state;
 @end

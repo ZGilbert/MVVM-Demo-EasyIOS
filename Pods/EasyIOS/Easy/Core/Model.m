@@ -10,5 +10,20 @@
 
 @implementation Model
 
+-(instancetype)init{
+    self = [super init];
+    if(self){
+        [self loadModel];
+    }
+    return self;
+}
+
++(id)Model{
+    return [[self alloc]init];
+}
+
+-(void)loadModel{
+
+}
 
 @end
