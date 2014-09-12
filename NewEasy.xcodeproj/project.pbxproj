@@ -12,7 +12,6 @@
 		5F455A7F197E0483009011AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F455A7E197E0483009011AB /* AppDelegate.m */; };
 		5F455A85197E0483009011AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F455A83197E0483009011AB /* Main.storyboard */; };
 		5F455A87197E0483009011AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F455A86197E0483009011AB /* Images.xcassets */; };
-		5F455A93197E0484009011AB /* NewEasyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F455A92197E0484009011AB /* NewEasyTests.m */; };
 		5F455DD0197E06A1009011AB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F455DCF197E06A1009011AB /* CoreFoundation.framework */; };
 		5F455DD2197E06AB009011AB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F455DD1197E06AB009011AB /* libsqlite3.dylib */; };
 		5F455DED197E4B3B009011AB /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F455DEC197E4B3B009011AB /* libz.1.1.3.dylib */; };
@@ -30,16 +29,6 @@
 		5FCB433A1980E9DB009E7683 /* DemoSceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB43321980E9DB009E7683 /* DemoSceneModel.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5F455A8D197E0484009011AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F455A6E197E0483009011AB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F455A75197E0483009011AB;
-			remoteInfo = NewEasy;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1503C8C141D04B3A9D813CD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F455A76197E0483009011AB /* NewEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,9 +38,6 @@
 		5F455A7E197E0483009011AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5F455A84197E0483009011AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F455A86197E0483009011AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5F455A8C197E0483009011AB /* NewEasyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewEasyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F455A91197E0484009011AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F455A92197E0484009011AB /* NewEasyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewEasyTests.m; sourceTree = "<group>"; };
 		5F455DCF197E06A1009011AB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5F455DD1197E06AB009011AB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5F455DEC197E4B3B009011AB /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -94,13 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F455A89197E0483009011AB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				5F455A78197E0483009011AB /* NewEasy */,
-				5F455A8F197E0484009011AB /* NewEasyTests */,
 				5F455A77197E0483009011AB /* Products */,
 				C99C8EA04E1D4DDCBB497107 /* Pods.xcconfig */,
 				237DA62E0A0C4AD0BAC767D6 /* Frameworks */,
@@ -134,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				5F455A76197E0483009011AB /* NewEasy.app */,
-				5F455A8C197E0483009011AB /* NewEasyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,23 +137,6 @@
 			children = (
 				5F455A7A197E0483009011AB /* Info.plist */,
 				5F455A7B197E0483009011AB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F455A8F197E0484009011AB /* NewEasyTests */ = {
-			isa = PBXGroup;
-			children = (
-				5F455A92197E0484009011AB /* NewEasyTests.m */,
-				5F455A90197E0484009011AB /* Supporting Files */,
-			);
-			path = NewEasyTests;
-			sourceTree = "<group>";
-		};
-		5F455A90197E0484009011AB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5F455A91197E0484009011AB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,24 +207,6 @@
 			productReference = 5F455A76197E0483009011AB /* NewEasy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F455A8B197E0483009011AB /* NewEasyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F455A99197E0484009011AB /* Build configuration list for PBXNativeTarget "NewEasyTests" */;
-			buildPhases = (
-				5F455A88197E0483009011AB /* Sources */,
-				5F455A89197E0483009011AB /* Frameworks */,
-				5F455A8A197E0483009011AB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F455A8E197E0484009011AB /* PBXTargetDependency */,
-			);
-			name = NewEasyTests;
-			productName = NewEasyTests;
-			productReference = 5F455A8C197E0483009011AB /* NewEasyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -276,10 +218,6 @@
 				TargetAttributes = {
 					5F455A75197E0483009011AB = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					5F455A8B197E0483009011AB = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 5F455A75197E0483009011AB;
 					};
 				};
 			};
@@ -297,7 +235,6 @@
 			projectRoot = "";
 			targets = (
 				5F455A75197E0483009011AB /* NewEasy */,
-				5F455A8B197E0483009011AB /* NewEasyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +246,6 @@
 			files = (
 				5F455A85197E0483009011AB /* Main.storyboard in Resources */,
 				5F455A87197E0483009011AB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F455A8A197E0483009011AB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,23 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F455A88197E0483009011AB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F455A93197E0484009011AB /* NewEasyTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5F455A8E197E0484009011AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F455A75197E0483009011AB /* NewEasy */;
-			targetProxy = 5F455A8D197E0484009011AB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F455A83197E0483009011AB /* Main.storyboard */ = {
@@ -502,40 +416,6 @@
 			};
 			name = Release;
 		};
-		5F455A9A197E0484009011AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewEasy.app/NewEasy";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NewEasyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		5F455A9B197E0484009011AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NewEasy.app/NewEasy";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NewEasyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,15 +433,6 @@
 			buildConfigurations = (
 				5F455A97197E0484009011AB /* Debug */,
 				5F455A98197E0484009011AB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F455A99197E0484009011AB /* Build configuration list for PBXNativeTarget "NewEasyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F455A9A197E0484009011AB /* Debug */,
-				5F455A9B197E0484009011AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
