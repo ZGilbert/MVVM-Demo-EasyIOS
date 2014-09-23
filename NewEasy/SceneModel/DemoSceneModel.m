@@ -9,10 +9,18 @@
 
 #import "DemoSceneModel.h"
 
+#import "GoodsArray.h"
+
+@interface DemoSceneModel()
+
+@property(nonatomic,retain)GoodsArray *goodsArray;  //原始数据私有化
+@end
+
 @implementation DemoSceneModel
 
 -(void)loadSceneModel{
     [super loadSceneModel];
+    _goodsDisplay = nil;
     _goodsArray = nil;
     _goodsListRequest = [GoodsListRequest Request];
     [self.action useCache];  //开启缓存
@@ -37,7 +45,17 @@
      subscribeNext:^(NSNumber *state) {
         @strongify(self);
          NSLog(@"%@",self.goodsListRequest.url);
-        self.goodsArray = [[GoodsArray alloc] initWithDictionary:[self.goodsListRequest.output objectForKey:@"data"] error:nil]; //Model的ORM操作，dictionary to object
+         self.goodsArray = [[GoodsArray alloc] initWithDictionary:[self.goodsListRequest.output objectForKey:@"data"] error:nil]; //Model的ORM操作，dictionary to object
+    }];
+    
+    // add with display
+    [[RACObserve(self, goodsArray)   //监控原始数据 实时生成 展示数据
+     filter:^BOOL(GoodsArray* model) {
+         return model !=nil;
+     }]
+    subscribeNext:^(GoodsArray* model) {
+         @strongify(self);
+        self.goodsDisplay = [[[GoodsDisplay alloc]init] loadModel:model];
     }];
 }
 

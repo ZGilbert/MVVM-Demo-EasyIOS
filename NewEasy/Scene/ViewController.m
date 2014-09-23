@@ -27,15 +27,15 @@
 
     _demoSceneModel = [DemoSceneModel SceneModel];
     
-    //demoSceneModel.goodsArray 有修改就自动进行页面刷新
-    //demoSceneModel.goodsArray  的修改操作在_demoSceneModel中进行的
-    [[RACObserve(self.demoSceneModel,goodsArray)
-     filter:^BOOL(GoodsArray *newGoodsArray) {    //数据过滤
-         return newGoodsArray !=nil;
+    //demoSceneModel.goodsDisplay 有修改就自动进行页面刷新
+    //demoSceneModel.goodsDisplay  的修改操作在_demoSceneModel中进行的
+    [[RACObserve(self.demoSceneModel,goodsDisplay)
+     filter:^BOOL(GoodsDisplay *newGoodsDisplay) {    //数据过滤
+         return newGoodsDisplay !=nil;
      }]
-     subscribeNext:^(GoodsArray *newGoodsArray) { //接收数据并刷新
-         [_collectionView successWithNewArray:newGoodsArray.goodsList];
-         _collectionView.total = newGoodsArray.total;
+     subscribeNext:^(GoodsDisplay *newGoodsDisplay) { //接收数据并刷新
+         [_collectionView successWithNewArray:newGoodsDisplay.list];
+         _collectionView.total = newGoodsDisplay.total;
          [_collectionView reloadData];
      }];
     
@@ -48,9 +48,9 @@
              
            //  [MBProgressHUD showErrorWithStatus:@"数据加载失败!"];
          }else if(self.demoSceneModel.goodsListRequest.sending){
-            // [SVProgressHUD showWithStatus:@"数据加载中!"];
+            // [MBProgressHUD showWithStatus:@"数据加载中!"];
          }else if(self.demoSceneModel.goodsListRequest.succeed){
-            // [SVProgressHUD dismiss];
+            // [MBProgressHUD dismiss];
          }
      }];
     
@@ -92,8 +92,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GoodsCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GoodsCell" forIndexPath:indexPath];
-    GoodsEntity *goods =  [_collectionView.dataArray objectAtIndex:indexPath.row];
-    [cell reload:goods];
+    GoodsCellDisplay *display =  [_collectionView.dataArray objectAtIndex:indexPath.row];
+    [cell reload:display];
     return cell;
 }
 

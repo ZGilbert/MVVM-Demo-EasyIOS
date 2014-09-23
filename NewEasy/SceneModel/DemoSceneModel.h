@@ -7,9 +7,10 @@
 //
 
 #import "SceneModel.h"
-#import "GoodsArray.h"
 #import "GoodsListRequest.h"
+#import "GoodsDisplay.h"
 @interface DemoSceneModel : SceneModel
-@property(nonatomic,retain)GoodsArray *goodsArray;
+
+@property(nonatomic,retain)GoodsDisplay *goodsDisplay; //提供给view访问的展示数据层
 @property(nonatomic,retain)GoodsListRequest *goodsListRequest;
 @end

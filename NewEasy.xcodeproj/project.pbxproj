@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4BEBCD2FB2C648A6BBABB551 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1503C8C141D04B3A9D813CD8 /* libPods.a */; };
+		5BA99C4D19D17E3000C610CF /* GoodsCellDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA99C4C19D17E3000C610CF /* GoodsCellDisplay.m */; };
+		5BA99C5019D17F6900C610CF /* GoodsDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA99C4F19D17F6900C610CF /* GoodsDisplay.m */; };
 		5F455A7C197E0483009011AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F455A7B197E0483009011AB /* main.m */; };
 		5F455A7F197E0483009011AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F455A7E197E0483009011AB /* AppDelegate.m */; };
 		5F455A85197E0483009011AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F455A83197E0483009011AB /* Main.storyboard */; };
@@ -31,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		1503C8C141D04B3A9D813CD8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA99C4B19D17E3000C610CF /* GoodsCellDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsCellDisplay.h; sourceTree = "<group>"; };
+		5BA99C4C19D17E3000C610CF /* GoodsCellDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsCellDisplay.m; sourceTree = "<group>"; };
+		5BA99C4E19D17F6900C610CF /* GoodsDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsDisplay.h; sourceTree = "<group>"; };
+		5BA99C4F19D17F6900C610CF /* GoodsDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsDisplay.m; sourceTree = "<group>"; };
 		5F455A76197E0483009011AB /* NewEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F455A7A197E0483009011AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F455A7B197E0483009011AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +104,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5BA99C4A19D17BE200C610CF /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				5BA99C4B19D17E3000C610CF /* GoodsCellDisplay.h */,
+				5BA99C4C19D17E3000C610CF /* GoodsCellDisplay.m */,
+				5BA99C4E19D17F6900C610CF /* GoodsDisplay.h */,
+				5BA99C4F19D17F6900C610CF /* GoodsDisplay.m */,
+			);
+			name = Display;
+			sourceTree = "<group>";
+		};
 		5F455A6D197E0483009011AB = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,7 @@
 		5F455A78197E0483009011AB /* NewEasy */ = {
 			isa = PBXGroup;
 			children = (
+				5BA99C4A19D17BE200C610CF /* Display */,
 				5FCB431F1980E9DB009E7683 /* Model */,
 				5FCB43281980E9DB009E7683 /* Request */,
 				5FCB432B1980E9DB009E7683 /* Scene */,
@@ -294,7 +312,9 @@
 				5FCB43341980E9DB009E7683 /* GoodsEntity.m in Sources */,
 				5FCB43381980E9DB009E7683 /* GoodsCell.m in Sources */,
 				5FCB43361980E9DB009E7683 /* WebSiteEntity.m in Sources */,
+				5BA99C4D19D17E3000C610CF /* GoodsCellDisplay.m in Sources */,
 				5F455A7F197E0483009011AB /* AppDelegate.m in Sources */,
+				5BA99C5019D17F6900C610CF /* GoodsDisplay.m in Sources */,
 				5F455A7C197E0483009011AB /* main.m in Sources */,
 				5FCB43351980E9DB009E7683 /* ImageEntity.m in Sources */,
 				5FCB43371980E9DB009E7683 /* GoodsListRequest.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GoodsEntity.h"
+#import "GoodsCellDisplay.h"
 #import "RTLabel.h"
 @interface GoodsCell : UICollectionViewCell
 @property(nonatomic,strong)UIImageView *imageView;
@@ -18,5 +18,5 @@
 @property(nonatomic,strong)UILabel *commentCountLabel;
 @property(nonatomic,strong)UILabel *nameLabel;
 
--(void)reload:(GoodsEntity *)goods;
+-(void)reload:(GoodsCellDisplay *)display;
 @end

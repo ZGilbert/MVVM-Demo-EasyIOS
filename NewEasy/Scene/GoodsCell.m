@@ -49,20 +49,16 @@
         [_oldPriceLabel setTextAlignment:RTTextAlignmentCenter];
         _oldPriceLabel.hidden = YES;
         [self addSubview:_oldPriceLabel];
-        
-        
     }
     return self;
 }
 
--(void)reload:(GoodsEntity *)goods{
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:goods.image.img]];
-    _priceLabel.text = [NSString stringWithFormat:@"<font size=10 color='#EB3F3F'>￥</font><font size=17 color='#EB3F3F'>%@</font>",goods.price];
-    if(goods.priceOriginal !=nil && [goods.priceOriginal floatValue] !=0){
-        _oldPriceLabel.text = [NSString stringWithFormat:@"<font size=12 >￥%@</font>",goods.priceOriginal];
-        _oldPriceLabel.hidden = NO;
-    }
-    _nameLabel.text  = goods.name;
+-(void)reload:(GoodsCellDisplay *)display{
+    [_imageView sd_setImageWithURL:display.imageUrl];
+    _priceLabel.text = display.price;
+    _oldPriceLabel.text = display.oldPrice;
+    _oldPriceLabel.hidden = display.isOldPriceHidden;
+    _nameLabel.text  = display.name;
 }
 
 @end
